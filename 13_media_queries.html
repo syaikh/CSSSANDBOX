@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Media Queries</title>
+    
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -20,7 +21,7 @@
 
         /* Different device display settings */
         /* smartphones */
-        @media(max-width: 500px) {
+        @media only screen and (max-width: 500px) {
             body {
                 background: red;
             }
@@ -40,7 +41,42 @@
                 display: block;
             }
         }
+
+        /* normal */
+        @media(min-width: 769px) and (max-width: 1200px ) {  
+            body {
+                background: green;
+            }
+
+            #normal h1 {
+                display: block;
+            }
+        }
+
+        /* widescreen */
+        @media(min-width: 1201px) {  
+            body {
+                background: black;
+            }
+
+            #widescreen h1 {
+                display: block;
+            }
+        }
+
+        /* landscape */
+        @media(max-height: 500px) {  
+            body {
+                background: orange;
+            }
+
+            #landscape h1 {
+                display: block;
+            }
+        }
     </style>
+    <!-- load if only the screen max size is 768 aka mobile -->
+    <!-- <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 768px)">  -->
 </head>
 <body>
     <div id="widescreen">
