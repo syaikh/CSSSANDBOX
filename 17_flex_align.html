@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex Align</title>
+  <style>
+
+    /* NOTES: 
+      You can't align a child if it is wrapped by the container. So delete the wrap on container section or set it to "nowrap"
+     */
+     
+    #container {
+      background: #555;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* 
+        OPTIONS:
+          flex-start
+          flex-end
+          center
+          space-around
+          space-between
+          space-evenly
+       */
+       height: 600px;
+
+       /* align items vertically (height property must be set). related to item's stretching */
+       align-items: baseline;
+        /* 
+          OPTIONS:
+            flex-start
+            flex-end
+            center
+            baseline
+            stretch
+         */
+
+
+       /* similar to justify-content but vertically */
+       align-content: space-between;
+       /* 
+          OPTIONS:
+          flex-start
+          flex-end
+          center
+          space-around
+          space-between
+       */
+    }
+
+    .item-1 {
+      /* order: 3 */
+      height: 50px;
+    }
+
+    .item-2 {
+      /* align single item vertical */
+      align-self: flex-end;
+      /* 
+          OPTIONS:
+            flex-start
+            flex-end
+            center
+            baseline
+            stretch
+         */
+      /* order: 2; */
+    }
+
+    .item-3 {
+      /* order: 1; */
+      height: 100px;;
+
+    }
+
+    .item-4 {
+      height: 75px;
+    }
+    .item-5 {
+      height: 60px;
+    }
+    .item-6 {
+      height: 90px;
+    }
+    .item-7 {
+      height: 130px;
+    }
+    .item-8 {
+      height: 110px;
+    }
+
+    .item {
+      background: #f4f4f4;
+      border: red solid 2px;
+      padding: 1rem;
+      text-align: center;
+      margin: 0.75rem;
+      flex-basis: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="item item-1"><h3>Item 1</h3></div>
+    <div class="item item-2"><h3>Item 2</h3></div>
+    <div class="item item-3"><h3>Item 3</h3></div>
+    <!-- <div class="item item-4"><h3>Item 4</h3></div>
+    <div class="item item-5"><h3>Item 5</h3></div>
+    <div class="item item-6"><h3>Item 6</h3></div>
+    <div class="item item-7"><h3>Item 7</h3></div>
+    <div class="item item-8"><h3>Item 8</h3></div> -->
+  </div>
+</body>
+</html>
